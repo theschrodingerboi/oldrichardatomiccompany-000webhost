@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard & Atomic Company</title>
+    <link rel="stylesheet" href="STYLE/styles.css">
+    <script src="JS/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="IMG/richardatomiccompany.png" alt="Logo" id="logo">
+        <h1>Richard & Atomic Company</h1>
+    </header>
+    
+    <div class="container">
+        <div class="controls-left">
+            <button id="W" onclick="controlMotor('W')">W</button>
+            <button id="A" onclick="controlServo('A')">A</button>
+            <button id="S" onclick="controlMotor('S')">S</button>
+            <button id="D" onclick="controlServo('D')">D</button>
+        </div>
+        <div class="controls-right">
+            <div class="col">
+                <button id="left-axis" onclick="adjustAxis(-1)">Turn left axis</button>
+                <button id="down-lift" onclick="adjustLift(-1)">Tilt down grip</button>
+                <button id="close-grip" onclick="adjustGrip(-1)">Close grip</button>
+            </div>
+            <div class="col">
+                <button id="right-axis" onclick="adjustAxis(1)">Turn right axis</button>
+                <button id="up-lift" onclick="adjustLift(1)">Tilt up grip</button>
+                <button id="open-grip" onclick="adjustGrip(1)">Open grip</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Temperature: <span id="temperature"></span>°C</p>
+        <p>Humidity: <span id="humidity"></span>%</p>
+    </footer>
+</body>
+</html>
